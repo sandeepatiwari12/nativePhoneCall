@@ -5,20 +5,20 @@
 				<router-outlet row="0"></router-outlet>
 				<GridLayout row="1" columns="8 * 8 * 8 * 8" class="text-center" style.borderColor="black"
 					style.borderWidth="1 0 0 0" style.padding="10">
-					<GridLayout col="1" rows="* *" [style.color]="(isCurrentRoute('items')) ? '#6979f8' : 'gray'"
+					<GridLayout col="1" rows="* *" [style.color]="(isCurrentRoute('phone-logs')) ? '#6979f8' : 'gray'"
+						[nsRouterLink]="['/', 'app', 'phone-logs']">
+						<Label class="fas" text="&#xf522;"></Label>
+						<Label row="1" style.background="white" text="Phone log" class="far"></Label>
+					</GridLayout>
+					<GridLayout col="3" rows="* *" [style.color]="(isCurrentRoute('items')) ? '#6979f8' : 'gray'"
 						[nsRouterLink]="['/', 'app', 'items']">
 						<Label class="fas" text="&#xf522;"></Label>
-						<Label row="1" style.background="white" text="Dashboard" class="far"></Label>
+						<Label row="1" text="Items"></Label>
 					</GridLayout>
-					<GridLayout col="3" rows="* *" [style.color]="(isCurrentRoute('random')) ? '#6979f8' : 'gray'"
-						[nsRouterLink]="['/', 'app', 'random']">
-						<Label class="fas" text="&#xf522;"></Label>
-						<Label row="1" text="Random"></Label>
-					</GridLayout>
-					<GridLayout col="5" rows="* *" [style.color]="(isCurrentRoute(['pokedex', 'pokemon'])) ? '#6979f8' : 'gray'"
-						[nsRouterLink]="['/', 'app', 'pokedex']">
+					<GridLayout col="5" rows="* *" [style.color]="(isCurrentRoute('about')) ? '#6979f8' : 'gray'"
+						[nsRouterLink]="['/', 'app', 'about']">
 						<Label class="fas" text="&#xf03a;"></Label>
-						<Label row="1" text="Pokédex"></Label>
+						<Label row="1" text="Abouts us"></Label>
 					</GridLayout>
 				</GridLayout>
 			</GridLayout>

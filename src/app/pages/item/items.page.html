@@ -1,0 +1,15 @@
+<ActionBar title="Items" class="navbar-dark bg-dark"> </ActionBar>
+<Container>
+  <GridLayout>
+    <ScrollView>
+      <StackLayout class="items-panel">
+		<ActivityIndicator [busy]="isBusy"></ActivityIndicator>
+        <ng-container *ngIf="items && items.length">
+          <GridLayout *ngFor="let item of items" class="p-5 my-1">
+			<Label class="items" style.padding="10" text="{{'Name: '+ item.name +' | Role: '+ item.role}}"></Label>
+          </GridLayout>
+        </ng-container>
+      </StackLayout>
+    </ScrollView>
+  </GridLayout>
+</Container>

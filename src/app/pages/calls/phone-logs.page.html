@@ -1,0 +1,16 @@
+<ActionBar title="Phone logs" class="navbar-dark bg-dark"> </ActionBar>
+<Container>
+  <GridLayout>
+    <ScrollView>
+      <StackLayout class="phone-logs-panel">
+		<ActivityIndicator [busy]="isBusy"></ActivityIndicator>
+        <ng-container *ngIf="items && items.length">
+			<Label textAlignment="center" class="h2 description-label" text="Tap to call"></Label>
+          <GridLayout *ngFor="let item of items" class="p-5 mb-1">
+			<Button class="btn btn-primary btn-lg" style.padding="10" text="{{item.name+' | '+item.phoneNo}}" (tap)="call(item.phoneNo)"></Button>
+          </GridLayout>
+        </ng-container>
+      </StackLayout>
+    </ScrollView>
+  </GridLayout>
+</Container>

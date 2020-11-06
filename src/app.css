@@ -1,7 +1,7 @@
  
 @import '~@nativescript/theme/css/core.css';
-@import '~@nativescript/theme/css/blue.css';
-/* @import "~@nativescript/theme/css/default.css"; */
+/* @import '~@nativescript/theme/css/blue.css'; */
+@import "~@nativescript/theme/css/default.css";
 /* Ref: https://medium.com/@JCAguilera/fontawesome-5-and-nativescript-22653f2b3bac */
 .far {
     font-family: "Font Awesome 5 Free", "fa-regular-400";
