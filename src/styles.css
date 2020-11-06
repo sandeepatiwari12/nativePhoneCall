@@ -1,0 +1,48 @@
+Page.flex, Container.flex {
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    flex-grow: 1;
+}
+
+Page > GridLayout {
+    min-width: 100%;
+}
+
+GridLayout {
+	display: grid !important;
+	height: 100% !important;
+}
+
+GridLayout.card {
+	padding: 0;
+}
+
+.stack-layout-row > *:not(.col) {
+	-ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+ActionBar + Container > div.container-fluid {
+	margin-top: 60px;
+}
+
+Image {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    display: flex;
+}
+Image[stretch="aspectFit"] > img {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+}
+Image[stretch="aspectFill"] > img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}

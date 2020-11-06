@@ -1,0 +1,12 @@
+<Container class="flex" hideActionBar>
+	<GridLayout *ngIf="gridLayoutRows" class="p-20 py-2" [rows]="gridLayoutRows" columns="*"
+		(layoutChanged)="onLayoutChanged($event)">
+		<Label [row]="gridElementsRows[0]" text="Welcome to {{ title }}!" class="h1 text-center"
+			textWrap="true"></Label>
+		<Label [row]="gridElementsRows[1]" text="Powered by:" class="h3 text-center"></Label>
+		<Image [row]="gridElementsRows[2]" src="~/assets/loader.png" class="logo-size"></Image>
+		<Button [row]="gridElementsRows[3]" class="btn btn-primary btn-lg" [nsRouterLink]="['/', 'app', 'items']" clearHistory="true"
+			text="Go to Dashboard"></Button>
+			
+	</GridLayout>
+</Container>
